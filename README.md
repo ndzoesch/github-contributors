@@ -18,10 +18,10 @@ If you just want the contributors for the current year for `shopware/showpare`, 
 2. Once you have `all_commits.json`, you can parse it using `jq` and put it into a csv:
    
    ```bash
-   jq -r '.[].commit.author.name' all_commits.json | sort | uniq > authors.csv
+   jq -r '.[].author.login' all_commits.json | sort | uniq > authors.csv
    ```
 
-   Adjust the jq filter as needed to extract and process the data you want.
+   Adjust the jq filter as needed to extract and process the data you want. By default, the GitHub login of the user is used, which is also the GitHub username.
 
 ## Authentication
 
