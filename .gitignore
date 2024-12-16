@@ -1,2 +1,6 @@
 *.csv
 *.json
+*.zip
+*.txt
+/.env
+/avatars
